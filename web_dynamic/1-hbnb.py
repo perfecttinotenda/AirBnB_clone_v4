@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This Will Start our Flash Web App """
+""" This will Start our Flash Web App """
 from models import storage
 from models.state import State
 from models.city import City
@@ -17,7 +17,7 @@ def close_db(error):
     storage.close()
 
 
-@app.route('/0-hbnb/', strict_slashes=False)
+@app.route('/1-hbnb/', strict_slashes=False)
 def hbnb():
     """ Our HBNB is alive! """
     states = storage.all(State).values()
@@ -42,4 +42,4 @@ def hbnb():
 
 if __name__ == "__main__":
     """ Our Main Function """
-    app.run(host='0.0.0.0', port=5001)
+    app.run(host='0.0.0.0', port=5000)
